@@ -14,6 +14,7 @@ proyectos complejos.
 
 ---
 
+
 ### Instalación e Interfaz
 
 Para comenzar a trabajar con KiCad, es importante conocer cómo se configura la 
@@ -38,5 +39,69 @@ diseño, como la información del título y el tamaño de la hoja.
 entorno profesional o necesitas un formato estandarizado. Sin embargo, si estás 
 en fase de prototipado o pruebas, puedes configurarlos más adelante sin 
 problema.
+
+
+---
+
+
+### Atajos de Teclado en KiCad
+
+Para agilizar el flujo de trabajo en KiCad, es recomendable aprender algunos 
+atajos de teclado. Esto permite realizar acciones más rápidamente sin depender 
+del uso del mouse.
+
+#### Cómo acceder a la lista de atajos:  
+- Ir a **`Help > List Hotkeys`**.
+
+A continuación, algunos de los atajos más utilizados:
+
+---
+
+### Atajos en el editor de esquemáticos  
+Estos comandos se usan mientras se diseña el esquema eléctrico:  
+
+| Acción                           | Tecla  |
+|----------------------------------|--------|
+| Agregar un símbolo              | **A**  |
+| Agregar fuente de poder         | **P**  |
+| Reflejar un componente en X     | **X**  |
+| Reflejar un componente en Y     | **Y**  |
+| Mover un componente             | **M**  |
+| Iniciar un cableado             | **W**  |
+| Agregar etiqueta a una señal    | **L**  |
+| Editar el footprint de un símbolo | **F**  |
+| Editar referencia del símbolo   | **U**  |
+| Editar propiedades de un elemento | **E**  |
+| Copiar un elemento              | **C**  |
+
+*Sugerencia:* Usar **X/Y** para reflejar componentes y **M** para moverlos sin 
+necesidad de seleccionar la herramienta en la barra de herramientas.
+
+---
+
+### Atajos en el editor de PCB
+Estos comandos se utilizan cuando se trabaja en el diseño de la PCB:
+
+| Acción                         | Tecla  |
+|--------------------------------|--------|
+| Mover un componente           | **M**  |
+| Rotar un componente           | **R**  |
+| Iniciar una nueva pista       | **X**  |
+| Insertar una vía              | **V**  |
+| Rellenar las zonas de cobre   | **B**  |
+| Borrar un elemento            | **Delete** |
+
+*Sugerencia:* Usar **B** periódicamente en el editor de PCB rellena las zonas de cobre, 
+permitiendo visualizar mejor la distribución de las conexiones.
+
+---
+
+### Conclusión
+Aprender estos atajos reducirá el tiempo empleado en tareas repetitivas y hará 
+que el proceso de diseño sea más eficiente.
+
+
+---
+
 
 ---
