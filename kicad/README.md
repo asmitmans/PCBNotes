@@ -129,23 +129,54 @@ asociados.
 
 ## Creación de Símbolos Personalizados  
 
-Si un componente no está disponible en la biblioteca de KiCad, es posible crearlo 
-manualmente en el **Editor de Símbolos**.
+- **Acceso al Editor de Símbolos:**
+  - Dirígete a `Tools` > `Symbol Editor` desde el menú principal de KiCad.
 
-### Pasos para crear un símbolo nuevo:  
-1. Abrir **`Symbol Editor`**.  
-2. Crear una nueva biblioteca en **`File > New Library`** y guardarla como global 
-   para su uso en futuros proyectos.  
-3. Presionar **`New Symbol`** y definir:  
-   - **Nombre del símbolo** (Ejemplo: `FT232RL`).  
-4. Dibujar el símbolo:  
-   - Agregar un rectángulo (**Add Rectangle**) para representar el cuerpo del componente.  
-   - Insertar pines con **`Add Pin`** o la tecla **P**.  
-   - Configurar los pines con:  
-     - **Nombre** (Ejemplo: `TXD`).  
-     - **Número de pin** (Ejemplo: `1`).  
-     - **Tipo de pin** (`Input`, `Output`, `Power`, etc.).  
-5. Guardar el símbolo en la nueva biblioteca.  
+- **Creación de una Nueva Biblioteca:**
+  - Es recomendable crear una biblioteca personalizada para almacenar tus 
+  símbolos. Esto se logra seleccionando `File` > `New Library` y definiendo su 
+  ubicación.
+
+  - Si trabajas en varios proyectos y quieres reutilizar los componentes en el 
+  futuro, mantener la biblioteca como **global** es más eficiente.
+  - Si necesitas compartir el proyecto o asegurarte de que siempre tenga los 
+  componentes personalizados disponibles, entonces incluir la biblioteca dentro 
+  del **proyecto** es lo mejor.
+
+  - Se le asigna un nombre a la Library. 
+
+- **Definición del Símbolo:**
+  - Al crear un nuevo símbolo (`File` > `New Symbol`), establece el nombre y 
+  asócialo a la biblioteca creada.
+
+  - Aosciar el Simbolo a la biblioteca:
+    - Seleccionar la biblioteca correcta:
+      En la parte izquierda, busca la biblioteca <nombre_lib>.kicad_sym.
+      Si no aparece, agrégala manualmente en:
+      Preferences > Manage Symbol Libraries > Project Specific Libraries > 
+      Add Library.
+      Selecciona <nombre_lib>.kicad_sym y asegúrate de que esté activa.
+      Luego Save all.
+
+  - Asegúrate de que el origen (0,0) esté bien definido para facilitar la 
+  colocación del símbolo en los esquemas.
+
+- **Configuración de la Cuadrícula:**
+  - Ajusta la cuadrícula a un valor adecuado (por ejemplo, 50 mils) para 
+  garantizar una alineación precisa de los pines.
+
+- **Adición de Pines:**
+  - Utiliza la herramienta de agregar pines para incorporar cada pin necesario, 
+  asignando nombres, números y configurando la orientación y tipo de cada uno 
+  (entrada, salida, bidireccional, etc.).
+
+- **Dibujo del Cuerpo del Símbolo:**
+  - Emplea las herramientas de dibujo para crear la representación gráfica del 
+  componente, asegurando que los pines estén correctamente posicionados.
+
+- **Guardado y Verificación:**
+  - Guarda el símbolo y verifica su correcta integración insertándolo en un 
+  esquema de prueba.
 
 *Sugerencia:* Verificar el **datasheet** del componente para asegurarse de que la 
 cantidad de pines, nombres y tipos sean correctos antes de guardar el símbolo.
@@ -193,3 +224,46 @@ el símbolo o reemplazarlo por uno con la configuración correcta.
 ---
 
 
+
+### **2. Creación de Footprints Personalizados**
+
+- **Acceso al Editor de Footprints:**
+  - Desde el menú principal de KiCad, selecciona `Herramientas` > `Editor de huellas`.
+
+- **Creación de una Nueva Biblioteca de Footprints:**
+  - Al igual que con los símbolos, es aconsejable crear una biblioteca específica para tus footprints personalizados.
+
+- **Definición del Footprint:**
+  - Crea un nuevo footprint (`Archivo` > `Nueva huella`) y asígnale un nombre representativo.
+
+- **Configuración de la Cuadrícula:**
+  - Ajusta la cuadrícula según el paso de los pines del componente (por ejemplo, 0.5 mm) para una colocación precisa.
+
+- **Adición de Pads:**
+  - Utiliza la herramienta de agregar pads para colocar las áreas de contacto, configurando su forma, tamaño y asignando los números de pin correspondientes.
+
+- **Dibujo del Contorno del Componente:**
+  - Emplea las capas gráficas adecuadas para delinear el contorno físico del componente, facilitando su correcta colocación durante el ensamblaje.
+
+- **Definición del Punto de Origen:**
+  - Establece el origen en el pad correspondiente al pin 1 o en una posición central, según convenga para el diseño.
+
+- **Asociación con el Símbolo:**
+  - En el Editor de Esquemáticos, asigna el footprint creado al símbolo correspondiente mediante las propiedades del componente.
+
+- **Guardado y Verificación:**
+  - Guarda el footprint y verifica su correcta implementación colocándolo en un diseño de PCB de prueba.
+
+### **3. Recursos Adicionales**
+
+Para profundizar en estos procesos, te recomiendo los siguientes recursos:
+
+- **Documentación Oficial de KiCad:**
+  - Proporciona guías detalladas sobre la creación y gestión de símbolos y footprints.
+
+- **Tutorial en Video:**
+  - El siguiente video ofrece una demostración práctica de la creación de símbolos y footprints en KiCad:
+
+videoCreación de SÍMBOLO Y HUELLA en KiCad - IngeDonManualturn0search0
+
+Incorporando estos detalles a tus notas, podrás ofrecer una guía más completa y práctica para la creación de símbolos y footprints en KiCad. 
