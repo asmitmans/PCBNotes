@@ -220,10 +220,8 @@ esquema eléctrico:
 eléctricos (Ejemplo: `Power Input` con `Passive`). Si esto ocurre, se puede editar 
 el símbolo o reemplazarlo por uno con la configuración correcta.
 
-
 ---
-
-
+---
 
 ### **2. Creación de Footprints Personalizados**
 
@@ -267,3 +265,86 @@ Para profundizar en estos procesos, te recomiendo los siguientes recursos:
 videoCreación de SÍMBOLO Y HUELLA en KiCad - IngeDonManualturn0search0
 
 Incorporando estos detalles a tus notas, podrás ofrecer una guía más completa y práctica para la creación de símbolos y footprints en KiCad. 
+
+
+
+---
+---
+
+
+
+---
+
+## Generación de la Netlist y Sincronización con PCB
+
+### ¿Qué es la Netlist?
+La **Netlist** es un conjunto de datos que describe todas las conexiones entre los 
+componentes en el esquemático. Su propósito es transferir correctamente la 
+información del esquemático al editor de PCB, asegurando que todas las 
+conexiones sean fielmente replicadas en el diseño físico.
+
+En **KiCad 8**, el proceso de transferencia ya no se realiza exportando manualmente 
+una Netlist como en versiones anteriores, sino a través de la opción
+**"Update PCB from Schematic"**.
+
+---
+
+### Pasos para sincronizar el esquemático con el diseño de PCB  
+
+1. **Revisar que el esquemático no tenga errores**
+   - Asegurarse de que **todos los componentes tengan referencias asignadas**.
+   - Ejecutar el **"Electrical Rules Checker (ERC)"** y corregir cualquier advertencia
+   o error.  
+
+2. **Actualizar la PCB con los datos del esquemático**  
+   - Ir a **`Tools > Update PCB from Schematic`** o presionar **F8**.  
+   - Se abrirá una ventana mostrando los cambios que se aplicarán en la PCB.  
+   - Confirmar y presionar **"Update PCB"** para aplicar la sincronización.  
+
+3. **Verificar la importación de componentes en el editor de PCB**  
+   - Ir al **Editor de PCB** y asegurarse de que todos los componentes aparezcan en 
+  pantalla.  
+   - Si algún componente no aparece, verificar que tenga una referencia válida 
+  en el esquemático.  
+   - Reordenar los componentes si es necesario para facilitar el enrutamiento en 
+  la siguiente etapa.  
+
+---
+
+### Buenas Prácticas en la Sincronización de PCB
+
+- **No modificar manualmente la Netlist**: En KiCad 8, no es necesario exportar e 
+  importar una Netlist manualmente, ya que el sistema de sincronización lo 
+  maneja automáticamente.
+
+- **Sincronizar después de cada cambio**: Si se hacen modificaciones en el esquemático, 
+  siempre volver a ejecutar **"Update PCB from Schematic"** para mantener la 
+  coherencia.
+
+- **Evitar componentes sin footprint**: Antes de proceder a la PCB, asegurarse de 
+  que todos los componentes tengan un **footprint asignado**, ya que de lo contrario 
+  no aparecerán en el diseño de PCB.
+
+- **Verificación visual antes de continuar**: Es recomendable revisar en el editor 
+  de PCB que las conexiones y componentes importados estén correctamente 
+  organizados antes de comenzar la distribución y el enrutamiento.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
